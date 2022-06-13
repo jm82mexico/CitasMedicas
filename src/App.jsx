@@ -1,20 +1,19 @@
 import { useState } from 'react'
-import logo from './logo.svg'
+
 import './App.css'
+import Header from './components/Header'
+import Formulario from './components/Formulario'
+import ListadoPacientes from './components/ListadoPacientes'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <div className="App">
-      <h1 class="text-3xl font-bold underline bg-indigo-700">
-        Hello world!
-      </h1>
-
-      <div>
-      <button 
-          type="button"
-          className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg">Editar</button>
+    <div className="container mx-auto mt-20">
+      <Header/>
+      <div className='mt-12 md:flex'>
+        <Formulario/>
+        <ListadoPacientes/>
       </div>
     </div>
   )
